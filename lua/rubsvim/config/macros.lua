@@ -15,7 +15,7 @@ vim.cmd [[
 		autocmd BufEnter *.cpp let @g=":w\<CR> :!g++ -std=c++17 -O3 %\<CR> | :vsp |terminal ./a.out\<CR>i"
 		autocmd BufEnter *.c let @g=":w\<CR> :!gcc -O3 -std=c99 -Wno-deprecated-declarations -pedantic -Wall -Wextra %\<CR> | :vsp |terminal ./a.out\<CR>i"
     autocmd BufEnter *.rs let @g=":w\<CR> :vsp | terminal cargo run % \<CR>i"
-    autocmd BufEnter *.hs let @g=":w\<CR> :vsp | terminal ghc --make % \<CR>i"
+    autocmd BufEnter *.hs let @g=":w\<CR> :vsp | terminal runghc % \<CR>i"
 		autocmd BufEnter *.go let @g=":w\<CR> :vsp | terminal go run % \<CR>i"
 		autocmd BufEnter *.js let @g=":w\<CR> :vsp | terminal node % \<CR>i"
 		autocmd BufEnter *.html let @g=":w\<CR> :silent !chromium % \<CR>"
